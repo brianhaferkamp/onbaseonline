@@ -51,18 +51,21 @@ $(".base").on("click", function () {
 
 // reverse runs
 $(".visitor-runs").swipe({
-  swipeRight: function (event, target) {
+  tap: function (event, target) {
     var vRuns = $(this).find("span").text();
     vRuns++;
     $(".visitor-runs span").text(vRuns);
   },
+  threshold: 50
+});
 
+$(".visitor-runs").swipe({
   swipeLeft: function (event, target) {
     var vRuns = $(this).find("span").text();
     vRuns--;
     $(".visitor-runs span").text(vRuns);
   },
-  threshold: 0
+  threshold: 50
 });
 
 // $(".home-runs").on("click", function () {
@@ -73,18 +76,21 @@ $(".visitor-runs").swipe({
 
 // home runs
 $(".home-runs").swipe({
-  swipeRight: function (event, target) {
+  tap: function (event, target) {
     var vRuns = $(this).find("span").text();
     vRuns++;
     $(".home-runs span").text(vRuns);
   },
+  threshold: 50
+});
 
+$(".home-runs").swipe({
   swipeLeft: function (event, target) {
     var vRuns = $(this).find("span").text();
     vRuns--;
     $(".home-runs span").text(vRuns);
   },
-  threshold: 0
+  threshold: 50
 });
 
 // visitor hits
