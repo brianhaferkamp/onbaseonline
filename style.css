@@ -1,0 +1,241 @@
+.app {
+  display: grid;
+  grid-template-rows: auto 1fr 2fr auto;
+  height: 100vh;
+  max-width: 500px;
+  margin: auto;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+
+.game-info {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.scoreboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 40px 40px 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #000;
+}
+.scoreboard-grid li {
+  padding: 5px;
+  border: 1px solid black;
+}
+.scoreboard-grid li:not(.team-name) {
+  display: grid;
+  place-items: center;
+}
+.scoreboard-grid .team-name {
+  font-size: 0.9rem;
+}
+.scoreboard-grid .label {
+  background: black;
+  color: white;
+  font-size: 0.8rem;
+}
+
+.team-at-bat {
+  font-weight: 700;
+}
+
+.details {
+  padding: 0 1.5rem;
+}
+.details p {
+  margin: 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.details .outs,
+.details .inning {
+  font-size: 1.75rem;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.batter-group {
+  display: grid;
+  grid-template-columns: 1fr auto auto auto;
+  gap: 0.5rem;
+}
+
+.pitcher-group {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 0.5rem;
+}
+
+.batting-runs {
+  color: blue;
+}
+
+.defense {
+  color: orange;
+}
+
+.speed {
+  color: green;
+}
+
+.siera {
+  color: red;
+}
+
+.stamina {
+  color: purple;
+}
+
+.game-outcomes {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 2rem;
+  font-size: 0.8rem;
+  margin-top: 1rem;
+}
+.game-outcomes ul {
+  -moz-columns: 2;
+       columns: 2;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  -moz-column-width: 5px;
+       column-width: 5px;
+}
+.game-outcomes ul li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.5rem;
+  margin-bottom: 3px;
+}
+.game-outcomes ul li .roll-outcome {
+  font-weight: 700;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-content: center;
+}
+
+.diamond {
+  position: relative;
+  margin-right: 1rem;
+}
+
+.field {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  border: 3px solid #000;
+  left: 50%;
+  top: 25%;
+  transform: rotate(45deg) translate(-50%, 25%);
+}
+.field .base {
+  width: 36px;
+  height: 36px;
+  border: 3px solid #000;
+  position: absolute;
+}
+.field .base.runner {
+  background: #000;
+}
+.field .base:nth-child(1) {
+  top: -3px;
+  right: -3px;
+}
+.field .base:nth-child(2) {
+  top: -3px;
+  left: -3px;
+}
+.field .base:nth-child(3) {
+  bottom: -3px;
+  left: -3px;
+}
+
+.dice {
+  display: grid;
+  place-items: center;
+}
+.dice .die {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #000;
+  border-radius: 5px;
+  display: grid;
+  place-items: center;
+  margin: 1rem;
+}
+.dice .die span {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.dice .die.die3 {
+  transform: rotate(45deg);
+  align-self: start;
+}
+.dice .die.die3 span {
+  display: inline-block;
+  transform: rotate(-45deg);
+}
+
+.dice-roller button {
+  width: 100%;
+  padding: 1.5rem 0;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  background: #000;
+  color: #fff;
+  border: 0;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 3rem;
+  border: 2px solid #333;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+  display: none;
+}
+.modal .label {
+  margin: 0 0 0.5rem;
+}
+.modal input {
+  padding: 5px;
+  border: 1px solid #000;
+  border-radius: 3px;
+  margin: 0 0 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+.modal button {
+  display: inline-block;
+  padding: 0.5rem 2rem;
+}
+.modal button.save {
+  background: #000;
+  color: #fff;
+}
+.modal .button-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+}
+
+.change-pitcher-input-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}

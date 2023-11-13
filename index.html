@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - On Base Baseball Mobile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="app">
+  <!-- header-->
+  <header class="game-info">
+    <!-- score-->
+    <div class="scoreboard">
+      <ul class="scoreboard-grid">
+        <li class="team-name visitor-team-name team-at-bat">Visiting Team</li>
+        <li class="visitor-runs"><span>0</span></li>
+        <li class="visitor-hits"><span>0</span></li>
+        <li class="visitor-errors"><span>0</span></li>
+        <li class="team-name home-team-name">Home Team</li>
+        <li class="home-runs"><span>0</span></li>
+        <li class="home-hits"><span>0</span></li>
+        <li class="home-errors"><span>0</span></li>
+      </ul>
+    </div>
+    <div class="details">
+      <!-- innings-->
+      <p class="inning-group">Inning <span class="inning">1</span></p>
+      <!-- outs-->
+      <p class="outs-group">Outs <span class="outs">0</span></p>
+    </div>
+  </header>
+  <section class="game-outcomes">
+    <!-- batter outcomes-->
+    <article class="batter-outcomes">
+      <div class="batter-group">
+        <p class="batter-name">Batter</p>
+        <p class="batting-runs">7.0</p>
+        <p class="defense">0.0</p>
+        <p class="speed">5.0</p>
+      </div>
+      <ul class="batter-col1" hidden="hidden">
+        <li><span class="roll-outcome">11</span> <span class="outcome-text">2B</span></li>
+        <li><span class="roll-outcome">12</span> <span class="outcome-text">GO ></span></li>
+        <li><span class="roll-outcome">13</span> <span class="outcome-text">GO</span></li>
+        <li><span class="roll-outcome">14</span> <span class="outcome-text">1B*</span></li>
+        <li><span class="roll-outcome">15</span> <span class="outcome-text">GO</span></li>
+        <li><span class="roll-outcome">16</span> <span class="outcome-text">FO ></span></li>
+        <li><span class="roll-outcome">22</span> <span class="outcome-text">2B / 3B-7</span></li>
+        <li><span class="roll-outcome">23</span> <span class="outcome-text">GO+</span></li>
+        <li><span class="roll-outcome">24</span> <span class="outcome-text">DP or K</span></li>
+        <li><span class="roll-outcome">25</span> <span class="outcome-text">FO+</span></li>
+        <li><span class="roll-outcome">26</span> <span class="outcome-text">1B+</span></li>
+        <li><span class="roll-outcome">33</span> <span class="outcome-text">2B</span></li>
+        <li><span class="roll-outcome">34</span> <span class="outcome-text">FO</span></li>
+        <li><span class="roll-outcome">35</span> <span class="outcome-text">BB</span></li>
+        <li><span class="roll-outcome">36</span> <span class="outcome-text">FO</span></li>
+        <li><span class="roll-outcome">44</span> <span class="outcome-text">DP or K</span></li>
+        <li><span class="roll-outcome">45</span> <span class="outcome-text">HR</span></li>
+        <li><span class="roll-outcome">46</span> <span class="outcome-text">K</span></li>
+        <li><span class="roll-outcome">55</span> <span class="outcome-text">LO / Pop-7</span></li>
+        <li><span class="roll-outcome">56</span> <span class="outcome-text">HBP / BB-2</span></li>
+        <li><span class="roll-outcome">66</span> <span class="outcome-text">1B</span></li>
+      </ul>
+      <ul class="batter-col2" hidden="hidden">
+        <li><span class="roll-outcome">11</span> <span class="outcome-text">2B</span></li>
+        <li><span class="roll-outcome">12</span> <span class="outcome-text">GO ></span></li>
+        <li><span class="roll-outcome">13</span> <span class="outcome-text">GO</span></li>
+        <li><span class="roll-outcome">14</span> <span class="outcome-text">1B</span></li>
+        <li><span class="roll-outcome">15</span> <span class="outcome-text">GO</span></li>
+        <li><span class="roll-outcome">16</span> <span class="outcome-text">FO ></span></li>
+        <li><span class="roll-outcome">22</span> <span class="outcome-text">2B / 3B-7</span></li>
+        <li><span class="roll-outcome">23</span> <span class="outcome-text">GO+</span></li>
+        <li><span class="roll-outcome">24</span> <span class="outcome-text">DP or K</span></li>
+        <li><span class="roll-outcome">25</span> <span class="outcome-text">FO+</span></li>
+        <li><span class="roll-outcome">26</span> <span class="outcome-text">1B+</span></li>
+        <li><span class="roll-outcome">33</span> <span class="outcome-text">2B</span></li>
+        <li><span class="roll-outcome">34</span> <span class="outcome-text">HR / K-8</span></li>
+        <li><span class="roll-outcome">35</span> <span class="outcome-text">K</span></li>
+        <li><span class="roll-outcome">36</span> <span class="outcome-text">FO</span></li>
+        <li><span class="roll-outcome">44</span> <span class="outcome-text">BB</span></li>
+        <li><span class="roll-outcome">45</span> <span class="outcome-text">1B</span></li>
+        <li><span class="roll-outcome">46</span> <span class="outcome-text">DP or K</span></li>
+        <li><span class="roll-outcome">55</span> <span class="outcome-text">LO / Pop-7</span></li>
+        <li><span class="roll-outcome">56</span> <span class="outcome-text">HBP / BB-2</span></li>
+        <li><span class="roll-outcome">66</span> <span class="outcome-text">1B*</span></li>
+      </ul>
+      <ul class="batter-col3" hidden="hidden">
+        <li><span class="roll-outcome">11</span> <span class="outcome-text">GO</span></li>
+        <li><span class="roll-outcome">12</span> <span class="outcome-text">GO ></span></li>
+        <li><span class="roll-outcome">13</span> <span class="outcome-text">GO</span></li>
+        <li><span class="roll-outcome">14</span> <span class="outcome-text">HBP / BB-2</span></li>
+        <li><span class="roll-outcome">15</span> <span class="outcome-text">1B</span></li>
+        <li><span class="roll-outcome">16</span> <span class="outcome-text">FO ></span></li>
+        <li><span class="roll-outcome">22</span> <span class="outcome-text">2B / 3B-8</span></li>
+        <li><span class="roll-outcome">23</span> <span class="outcome-text">GO+</span></li>
+        <li><span class="roll-outcome">24</span> <span class="outcome-text">DP or K</span></li>
+        <li><span class="roll-outcome">25</span> <span class="outcome-text">FO+</span></li>
+        <li><span class="roll-outcome">26</span> <span class="outcome-text">GO</span></li>
+        <li><span class="roll-outcome">33</span> <span class="outcome-text">HR</span></li>
+        <li><span class="roll-outcome">34</span> <span class="outcome-text">2B</span></li>
+        <li><span class="roll-outcome">35</span> <span class="outcome-text">K</span></li>
+        <li><span class="roll-outcome">36</span> <span class="outcome-text">FO</span></li>
+        <li><span class="roll-outcome">44</span> <span class="outcome-text">1B+</span></li>
+        <li><span class="roll-outcome">45</span> <span class="outcome-text">FO</span></li>
+        <li><span class="roll-outcome">46</span> <span class="outcome-text">DP or K</span></li>
+        <li><span class="roll-outcome">55</span> <span class="outcome-text">LO / Foul-6</span></li>
+        <li><span class="roll-outcome">56</span> <span class="outcome-text">K</span></li>
+        <li><span class="roll-outcome">66</span> <span class="outcome-text">1B*</span></li>
+      </ul>
+      <ul class="batter-col4" hidden="hidden">
+        <li><span class="roll-outcome">11</span> <span class="outcome-text">1B</span></li>
+        <li><span class="roll-outcome">12</span> <span class="outcome-text">GO ></span></li>
+        <li><span class="roll-outcome">13</span> <span class="outcome-text">GO</span></li>
+        <li><span class="roll-outcome">14</span> <span class="outcome-text">HBP / BB-2</span></li>
+        <li><span class="roll-outcome">15</span> <span class="outcome-text">1B+</span></li>
+        <li><span class="roll-outcome">16</span> <span class="outcome-text">FO ></span></li>
+        <li><span class="roll-outcome">22</span> <span class="outcome-text">1B / 3B-9</span></li>
+        <li><span class="roll-outcome">23</span> <span class="outcome-text">GO+</span></li>
+        <li><span class="roll-outcome">24</span> <span class="outcome-text">DP or K</span></li>
+        <li><span class="roll-outcome">25</span> <span class="outcome-text">FO+</span></li>
+        <li><span class="roll-outcome">26</span> <span class="outcome-text">GO</span></li>
+        <li><span class="roll-outcome">33</span> <span class="outcome-text">GO</span></li>
+        <li><span class="roll-outcome">34</span> <span class="outcome-text">2B</span></li>
+        <li><span class="roll-outcome">35</span> <span class="outcome-text">K</span></li>
+        <li><span class="roll-outcome">36</span> <span class="outcome-text">FO</span></li>
+        <li><span class="roll-outcome">44</span> <span class="outcome-text">1B*</span></li>
+        <li><span class="roll-outcome">45</span> <span class="outcome-text">FO</span></li>
+        <li><span class="roll-outcome">46</span> <span class="outcome-text">DP or K</span></li>
+        <li><span class="roll-outcome">55</span> <span class="outcome-text">LO / Foul-5</span></li>
+        <li><span class="roll-outcome">56</span> <span class="outcome-text">K</span></li>
+        <li><span class="roll-outcome">66</span> <span class="outcome-text">HR</span></li>
+      </ul>
+    </article>
+    <!-- pitcher outcomes-->
+    <article class="pitcher-outcomes">
+      <div class="pitcher-group">
+        <p class="pitcher-name">Pitcher</p>
+        <p class="siera">3.00</p>
+        <p class="stamina">24</p>
+      </div>
+      <ul class="pitcher-col1" hidden="hidden">
+        <li><span class="roll-outcome">11</span> <span class="outcome-text">K</span></li>
+        <li><span class="roll-outcome">12</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">13</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">14</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">15</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">16</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">22</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">23</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">24</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">25</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">26</span> <span class="outcome-text">K</span></li>
+        <li><span class="roll-outcome">33</span> <span class="outcome-text">1B</span></li>
+        <li><span class="roll-outcome">34</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">35</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">36</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">44</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">45</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">46</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">55</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">56</span> <span class="outcome-text">K</span></li>
+        <li><span class="roll-outcome">66</span> <span class="outcome-text"></span></li>
+      </ul>
+      <ul class="pitcher-col2" hidden="hidden">
+        <li><span class="roll-outcome">11</span> <span class="outcome-text">K</span></li>
+        <li><span class="roll-outcome">12</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">13</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">14</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">15</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">16</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">22</span> <span class="outcome-text">2B</span></li>
+        <li><span class="roll-outcome">23</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">24</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">25</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">26</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">33</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">34</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">35</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">36</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">44</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">45</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">46</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">55</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">56</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">66</span> <span class="outcome-text"></span></li>
+      </ul>
+      <ul class="pitcher-col3" hidden="hidden">
+        <li><span class="roll-outcome">11</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">12</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">13</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">14</span> <span class="outcome-text">2B</span></li>
+        <li><span class="roll-outcome">15</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">16</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">22</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">23</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">24</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">25</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">26</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">33</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">34</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">35</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">36</span> <span class="outcome-text">BB</span></li>
+        <li><span class="roll-outcome">44</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">45</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">46</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">55</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">56</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">66</span> <span class="outcome-text"></span></li>
+      </ul>
+      <ul class="pitcher-col4" hidden="hidden">
+        <li><span class="roll-outcome">11</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">12</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">13</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">14</span> <span class="outcome-text">2B</span></li>
+        <li><span class="roll-outcome">15</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">16</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">22</span> <span class="outcome-text">HR</span></li>
+        <li><span class="roll-outcome">23</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">24</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">25</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">26</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">33</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">34</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">35</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">36</span> <span class="outcome-text">BB</span></li>
+        <li><span class="roll-outcome">44</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">45</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">46</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">55</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">56</span> <span class="outcome-text"></span></li>
+        <li><span class="roll-outcome">66</span> <span class="outcome-text"></span></li>
+      </ul>
+    </article>
+  </section>
+  <main>
+    <!-- dice-->
+    <div class="dice">
+      <div class="die die1 d61"><span></span></div>
+      <div class="die die2 d62"><span></span></div>
+      <div class="die die3 d9"><span></span></div>
+    </div>
+    <!-- diamond-->
+    <section class="diamond">
+      <div class="field">
+        <div class="base"></div>
+        <div class="base"></div>
+        <div class="base"></div>
+      </div>
+    </section>
+  </main>
+  <footer class="dice-roller">
+    <!-- roll button-->
+    <button id="roll">Roll</button>
+  </footer>
+</div>
+<!-- modals-->
+<!-- visiting team name change-->
+<aside class="modal visiting-team-name-modal">
+  <header>
+    <p class="label">Visiting Team Name</p>
+  </header>
+  <section class="team-name-input-wrapper">
+    <input class="visiting-team-name-input"/>
+  </section>
+  <footer class="button-wrapper">
+    <button class="save team-name-save">Save</button>
+    <button class="modal-close">Close</button>
+  </footer>
+</aside>
+<!-- home team name change-->
+<aside class="modal home-team-name-modal">
+  <header>
+    <p class="label">Home Team Name</p>
+  </header>
+  <section class="team-name-input-wrapper">
+    <input class="home-team-name-input"/>
+  </section>
+  <footer class="button-wrapper">
+    <button class="save team-name-save">Save</button>
+    <button class="modal-close">Close</button>
+  </footer>
+</aside>
+<!-- change pitcher-->
+<aside class="modal change-pitcher-modal">
+  <header>
+    <p class="label">Change Pitcher</p>
+  </header>
+  <section class="change-pitcher-input-wrapper">
+    <input class="change-pitcher-siera-input siera-input" placeholder="SIERA" type="number"/>
+    <input class="change-pitcher-stamina-input stamina-input" placeholder="Stamina" type="number"/>
+  </section>
+  <footer class="button-wrapper">
+    <button class="save change-pitcher-save">Save</button>
+    <button class="modal-close">Close</button>
+  </footer>
+</aside>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
