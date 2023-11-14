@@ -43,93 +43,99 @@ $(".base").on("click", function () {
 //---------------------------------------------
 
 // runs
-// $(".visitor-runs").on("click", function () {
-//   var vRuns = $(this).find("span").text();
-//   vRuns++;
-//   $(".visitor-runs span").text(vRuns);
-// });
+$(".visitor-runs").on("click", function () {
+  var vRuns = $(this).find("span").text();
+  vRuns++;
+  $(".visitor-runs span").text(vRuns);
+});
 
 // reverse runs
-$(".visitor-runs").swipe({
-  tap: function (event, target) {
-    var vRuns = $(this).find("span").text();
-    vRuns++;
-    $(".visitor-runs span").text(vRuns);
-  },
-  threshold: 50
-});
-
-$(".visitor-runs").swipe({
-  swipeLeft: function (event, target) {
-    var vRuns = $(this).find("span").text();
-    vRuns--;
-    $(".visitor-runs span").text(vRuns);
-  },
-  threshold: 50
-});
-
-// $(".home-runs").on("click", function () {
-//   var hRuns = $(this).find("span").text();
-//   hRuns++;
-//   $(".home-runs span").text(hRuns);
+// $(".visitor-runs").swipe({
+//   tap: function (event, target) {
+//     var vRuns = $(this).find("span").text();
+//     vRuns++;
+//     $(".visitor-runs span").text(vRuns);
+//   },
+//   threshold: 50
 // });
+
+// $(".visitor-runs").swipe({
+//   swipeLeft: function (event, target) {
+//     var vRuns = $(this).find("span").text();
+//     vRuns--;
+//     $(".visitor-runs span").text(vRuns);
+//   },
+//   threshold: 50
+// });
+
+$(".home-runs").on("click", function () {
+  var hRuns = $(this).find("span").text();
+  hRuns++;
+  $(".home-runs span").text(hRuns);
+});
 
 // home runs
-$(".home-runs").swipe({
-  tap: function (event, target) {
-    var vRuns = $(this).find("span").text();
-    vRuns++;
-    $(".home-runs span").text(vRuns);
-  },
-  threshold: 50
-});
-
-$(".home-runs").swipe({
-  swipeLeft: function (event, target) {
-    var vRuns = $(this).find("span").text();
-    vRuns--;
-    $(".home-runs span").text(vRuns);
-  },
-  threshold: 50
-});
-
-// visitor hits
-$(".visitor-hits").swipe({
-  swipeRight: function (event, target) {
-    var vHits = $(this).find("span").text();
-    vHits++;
-    $(".visitor-hits span").text(vHits);
-  },
-
-  swipeLeft: function (event, target) {
-    var vHits = $(this).find("span").text();
-    vHits--;
-    $(".visitor-hits span").text(vHits);
-  },
-  threshold: 0
-});
-
-// $(".home-hits").on("click", function () {
-//   var hHits = $(this).find("span").text();
-//   hHits++;
-//   $(".home-hits span").text(hHits);
+// $(".home-runs").swipe({
+//   tap: function (event, target) {
+//     var vRuns = $(this).find("span").text();
+//     vRuns++;
+//     $(".home-runs span").text(vRuns);
+//   },
+//   threshold: 50
 // });
 
-// home hits
-$(".home-hits").swipe({
-  swipeRight: function (event, target) {
-    var hHits = $(this).find("span").text();
-    hHits++;
-    $(".home-hits span").text(hHits);
-  },
+// $(".home-runs").swipe({
+//   swipeLeft: function (event, target) {
+//     var vRuns = $(this).find("span").text();
+//     vRuns--;
+//     $(".home-runs span").text(vRuns);
+//   },
+//   threshold: 50
+// });
 
-  swipeLeft: function (event, target) {
-    var hHits = $(this).find("span").text();
-    hHits--;
-    $(".home-hits span").text(hHits);
-  },
-  threshold: 0
+// visitor hits
+// $(".visitor-hits").swipe({
+//   swipeRight: function (event, target) {
+//     var vHits = $(this).find("span").text();
+//     vHits++;
+//     $(".visitor-hits span").text(vHits);
+//   },
+
+//   swipeLeft: function (event, target) {
+//     var vHits = $(this).find("span").text();
+//     vHits--;
+//     $(".visitor-hits span").text(vHits);
+//   },
+//   threshold: 0
+// });
+
+$(".visitor-hits").on("click", function () {
+  var vHits = $(this).find("span").text();
+  vHits++;
+  $(".visitor-hits span").text(vHits);
 });
+
+$(".home-hits").on("click", function () {
+  var hHits = $(this).find("span").text();
+  hHits++;
+  $(".home-hits span").text(hHits);
+});
+
+// home hits
+// $(".home-hits").swipe({
+//   swipeRight: function (event, target) {
+//     var hHits = $(this).find("span").text();
+//     hHits++;
+//     $(".home-hits span").text(hHits);
+//   },
+
+//   swipeLeft: function (event, target) {
+//     var hHits = $(this).find("span").text();
+//     hHits--;
+//     $(".home-hits span").text(hHits);
+//   },
+//   threshold: 0
+// });
 
 // errors
 // $(".visitor-errors").on("click", function () {
@@ -144,37 +150,49 @@ $(".home-hits").swipe({
 //   $(".home-errors span").text(hErrors);
 // });
 
-// visitor errors
-$(".visitor-errors").swipe({
-  swipeRight: function (event, target) {
-    var vErrors = $(this).find("span").text();
-    vErrors++;
-    $(".visitor-errors span").text(vErrors);
-  },
-
-  swipeLeft: function (event, target) {
-    var vErrors = $(this).find("span").text();
-    vErrors--;
-    $(".visitor-errors span").text(vErrors);
-  },
-  threshold: 0
+$(".visitor-errors").on("click", function () {
+  var vErrors = $(this).find("span").text();
+  vErrors++;
+  $(".visitor-errors span").text(vErrors);
 });
+
+$(".home-errors").on("click", function () {
+  var vErrors = $(this).find("span").text();
+  vErrors++;
+  $(".home-errors span").text(vErrors);
+});
+
+// visitor errors
+// $(".visitor-errors").swipe({
+//   swipeRight: function (event, target) {
+//     var vErrors = $(this).find("span").text();
+//     vErrors++;
+//     $(".visitor-errors span").text(vErrors);
+//   },
+
+//   swipeLeft: function (event, target) {
+//     var vErrors = $(this).find("span").text();
+//     vErrors--;
+//     $(".visitor-errors span").text(vErrors);
+//   },
+//   threshold: 0
+// });
 
 // home errors
-$(".home-errors").swipe({
-  swipeRight: function (event, target) {
-    var hErrors = $(this).find("span").text();
-    hErrors++;
-    $(".home-errors span").text(hErrors);
-  },
+// $(".home-errors").swipe({
+//   swipeRight: function (event, target) {
+//     var hErrors = $(this).find("span").text();
+//     hErrors++;
+//     $(".home-errors span").text(hErrors);
+//   },
 
-  swipeLeft: function (event, target) {
-    var hErrors = $(this).find("span").text();
-    hErrors--;
-    $(".home-errors span").text(hErrors);
-  },
-  threshold: 0
-});
+//   swipeLeft: function (event, target) {
+//     var hErrors = $(this).find("span").text();
+//     hErrors--;
+//     $(".home-errors span").text(hErrors);
+//   },
+//   threshold: 0
+// });
 
 //---------------------------------------------
 // dice roll

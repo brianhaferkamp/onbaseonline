@@ -2,15 +2,21 @@
   display: grid;
   grid-template-rows: auto 1fr 2fr auto;
   height: 100vh;
-  max-width: 500px;
+  max-width: 1140px;
   margin: auto;
   padding: 0.5rem;
   box-sizing: border-box;
+}
+@media (min-width: 768px) {
+  .app {
+    padding: 1rem;
+  }
 }
 
 .game-info {
   display: grid;
   grid-template-columns: 2fr 1fr;
+  align-items: center;
 }
 
 .scoreboard-grid {
@@ -21,21 +27,57 @@
   padding: 0;
   border: 1px solid #000;
 }
+@media (min-width: 768px) {
+  .scoreboard-grid {
+    grid-template-columns: 1fr 60px 60px 60px;
+  }
+}
 .scoreboard-grid li {
   padding: 5px;
   border: 1px solid black;
+}
+@media (min-width: 768px) {
+  .scoreboard-grid li {
+    font-size: 1.25rem;
+  }
 }
 .scoreboard-grid li:not(.team-name) {
   display: grid;
   place-items: center;
 }
 .scoreboard-grid .team-name {
-  font-size: 0.9rem;
-}
-.scoreboard-grid .label {
-  background: black;
-  color: white;
   font-size: 0.8rem;
+  transition: background 200ms ease;
+}
+@media (min-width: 768px) {
+  .scoreboard-grid .team-name {
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 1140px) {
+  .scoreboard-grid .team-name:hover {
+    cursor: pointer;
+    background: #eee;
+  }
+}
+.scoreboard-grid .visitor-runs,
+.scoreboard-grid .home-runs,
+.scoreboard-grid .visitor-hits,
+.scoreboard-grid .home-hits,
+.scoreboard-grid .visitor-errors,
+.scoreboard-grid .home-errors {
+  transition: background 200ms ease;
+}
+@media (min-width: 1140px) {
+  .scoreboard-grid .visitor-runs:hover,
+.scoreboard-grid .home-runs:hover,
+.scoreboard-grid .visitor-hits:hover,
+.scoreboard-grid .home-hits:hover,
+.scoreboard-grid .visitor-errors:hover,
+.scoreboard-grid .home-errors:hover {
+    cursor: pointer;
+    background: #eee;
+  }
 }
 
 .team-at-bat {
@@ -45,15 +87,46 @@
 .details {
   padding: 0 1.5rem;
 }
+@media (min-width: 1140px) {
+  .details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
 .details p {
   margin: 0.5rem 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+@media (min-width: 1140px) {
+  .details p {
+    justify-content: center;
+  }
+}
 .details .outs,
 .details .inning {
   font-size: 1.75rem;
+  margin-left: 1rem;
+}
+@media (min-width: 768px) {
+  .details .outs,
+.details .inning {
+    font-size: 2.25rem;
+  }
+}
+.details .inning-group {
+  padding: 0 10px;
+}
+.details .outs-group {
+  transition: background 200ms ease;
+  padding: 0 10px;
+}
+@media (min-width: 1140px) {
+  .details .outs-group:hover {
+    cursor: pointer;
+    background: #eee;
+  }
 }
 
 main {
@@ -66,12 +139,58 @@ main {
   display: grid;
   grid-template-columns: 1fr auto auto auto;
   gap: 0.5rem;
+  padding: 10px;
+  border: 1px solid #000;
+  transition: background 200ms ease;
+}
+@media (min-width: 768px) {
+  .batter-group {
+    border: 2px solid #000;
+  }
+}
+@media (min-width: 1140px) {
+  .batter-group {
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+}
+@media (min-width: 1140px) {
+  .batter-group:hover {
+    cursor: pointer;
+    background: #eee;
+  }
+}
+.batter-group p {
+  margin: 0;
 }
 
 .pitcher-group {
   display: grid;
   grid-template-columns: 1fr auto auto;
   gap: 0.5rem;
+  padding: 10px;
+  border: 1px solid #000;
+  transition: background 200ms ease;
+}
+@media (min-width: 768px) {
+  .pitcher-group {
+    border: 2px solid #000;
+  }
+}
+@media (min-width: 1140px) {
+  .pitcher-group {
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+}
+@media (min-width: 1140px) {
+  .pitcher-group:hover {
+    cursor: pointer;
+    background: #eee;
+  }
+}
+.pitcher-group p {
+  margin: 0;
 }
 
 .batting-runs {
@@ -97,24 +216,48 @@ main {
 .game-outcomes {
   display: grid;
   grid-template-columns: 3fr 2fr;
-  gap: 2rem;
+  gap: 1rem;
   font-size: 0.8rem;
   margin-top: 1rem;
+}
+@media (min-width: 768px) {
+  .game-outcomes {
+    font-size: 1rem;
+    gap: 2rem;
+  }
 }
 .game-outcomes ul {
   -moz-columns: 2;
        columns: 2;
   list-style: none;
-  padding: 0;
+  padding: 10px;
   margin: 0;
   -moz-column-width: 5px;
        column-width: 5px;
+  border: 1px solid #000;
+  border-top: 0;
+}
+@media (min-width: 768px) {
+  .game-outcomes ul {
+    border: 2px solid #000;
+    border-top: 0;
+  }
 }
 .game-outcomes ul li {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 0.5rem;
   margin-bottom: 3px;
+}
+@media (min-width: 768px) {
+  .game-outcomes ul li {
+    margin-bottom: 5px;
+  }
+}
+@media (min-width: 1140px) {
+  .game-outcomes ul li {
+    margin-bottom: 7px;
+  }
 }
 .game-outcomes ul li .roll-outcome {
   font-weight: 700;
@@ -124,6 +267,12 @@ main {
   display: grid;
   grid-template-columns: 1fr 2fr;
   align-content: center;
+}
+@media (min-width: 1140px) {
+  main {
+    align-content: start;
+    margin-top: 6rem;
+  }
 }
 
 .diamond {
@@ -140,11 +289,23 @@ main {
   top: 25%;
   transform: rotate(45deg) translate(-50%, 25%);
 }
+@media (min-width: 768px) {
+  .field {
+    width: 200px;
+    height: 200px;
+  }
+}
 .field .base {
   width: 36px;
   height: 36px;
   border: 3px solid #000;
   position: absolute;
+}
+@media (min-width: 768px) {
+  .field .base {
+    width: 50px;
+    height: 50px;
+  }
 }
 .field .base.runner {
   background: #000;
@@ -166,18 +327,35 @@ main {
   display: grid;
   place-items: center;
 }
+@media (min-width: 1140px) {
+  .dice {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
 .dice .die {
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   border: 2px solid #000;
   border-radius: 5px;
   display: grid;
   place-items: center;
-  margin: 1rem;
+  margin: 0.5rem 0;
+}
+@media (min-width: 768px) {
+  .dice .die {
+    width: 75px;
+    height: 75px;
+    margin: 1rem 0;
+  }
 }
 .dice .die span {
   font-size: 1.25rem;
   font-weight: 700;
+}
+@media (min-width: 768px) {
+  .dice .die span {
+    font-size: 2rem;
+  }
 }
 .dice .die.die3 {
   transform: rotate(45deg);
@@ -188,7 +366,13 @@ main {
   transform: rotate(-45deg);
 }
 
+@media (min-width: 768px) {
+  .dice-roller {
+    text-align: center;
+  }
+}
 .dice-roller button {
+  display: inline-block;
   width: 100%;
   padding: 1.5rem 0;
   font-size: 1.5rem;
@@ -196,6 +380,12 @@ main {
   background: #000;
   color: #fff;
   border: 0;
+}
+@media (min-width: 768px) {
+  .dice-roller button {
+    width: 50%;
+    text-align: center;
+  }
 }
 
 .modal {
