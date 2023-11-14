@@ -10,28 +10,22 @@
 <body>
 <!-- partial:index.partial.html -->
 <div class="app">
-  <!-- header-->
-  <header class="game-info">
-    <!-- score-->
-    <div class="scoreboard">
-      <ul class="scoreboard-grid">
-        <li class="team-name visitor-team-name team-at-bat">Visitor</li>
-        <li class="visitor-runs"><span>0</span></li>
-        <li class="visitor-hits"><span>0</span></li>
-        <li class="visitor-errors"><span>0</span></li>
-        <li class="team-name home-team-name">Home</li>
-        <li class="home-runs"><span>0</span></li>
-        <li class="home-hits"><span>0</span></li>
-        <li class="home-errors"><span>0</span></li>
-      </ul>
-    </div>
-    <div class="details">
-      <!-- innings-->
-      <p class="inning-group">Inning <span class="inning">1</span></p>
-      <!-- outs-->
-      <p class="outs-group">Outs <span class="outs">0</span></p>
-    </div>
-  </header>
+  <div class="scoreboard">
+    <ul class="scoreboard-grid">
+      <li class="label"> </li>
+      <li class="label">R</li>
+      <li class="label">H</li>
+      <li class="label">E</li>
+      <li class="team-name visitor-team-name team-at-bat">Visitor</li>
+      <li class="visitor-runs"><span>0</span></li>
+      <li class="visitor-hits"><span>0</span></li>
+      <li class="visitor-errors"><span>0</span></li>
+      <li class="team-name home-team-name">Home</li>
+      <li class="home-runs"><span>0</span></li>
+      <li class="home-hits"><span>0</span></li>
+      <li class="home-errors"><span>0</span></li>
+    </ul>
+  </div>
   <section class="game-outcomes">
     <!-- batter outcomes-->
     <article class="batter-outcomes">
@@ -235,22 +229,28 @@
       </ul>
     </article>
   </section>
-  <main>
-    <!-- dice-->
-    <div class="dice">
-      <div class="die die1 d61"><span></span></div>
-      <div class="die die2 d62"><span></span></div>
-      <div class="die die3 d9"><span></span></div>
+  <!-- diamond-->
+  <section class="diamond">
+    <div class="details">
+      <!-- innings-->
+      <p class="inning-group">Inning <span class="inning">1</span></p>
+      <!-- outs-->
+      <p class="outs-group">Outs <span class="outs">0</span></p>
     </div>
-    <!-- diamond-->
-    <section class="diamond">
+    <div class="field-wrapper">
       <div class="field">
         <div class="base"></div>
         <div class="base"></div>
         <div class="base"></div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
+  <!-- dice-->
+  <div class="dice">
+    <div class="die die1 d61"><span></span></div>
+    <div class="die die2 d62"><span></span></div>
+    <div class="die die3 d9"><span></span></div>
+  </div>
   <footer class="dice-roller">
     <!-- roll button-->
     <button id="roll">Roll</button>

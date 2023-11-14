@@ -1,6 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&display=swap");
+html, body {
+  font-family: "Mukta", sans-serif;
+}
+
 .app {
   display: grid;
-  grid-template-rows: auto 1fr 2fr auto;
+  grid-template-rows: auto auto 1fr auto auto;
   height: 100vh;
   max-width: 1140px;
   margin: auto;
@@ -13,19 +18,14 @@
   }
 }
 
-.game-info {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  align-items: center;
-}
-
 .scoreboard-grid {
   display: grid;
   grid-template-columns: 1fr 40px 40px 40px;
   list-style: none;
-  margin: 0;
+  margin: 0 0 1rem;
   padding: 0;
   border: 1px solid #000;
+  border-radius: 3px;
 }
 @media (min-width: 768px) {
   .scoreboard-grid {
@@ -34,7 +34,6 @@
 }
 .scoreboard-grid li {
   padding: 5px;
-  border: 1px solid black;
 }
 @media (min-width: 768px) {
   .scoreboard-grid li {
@@ -60,6 +59,16 @@
     background: #eee;
   }
 }
+.scoreboard-grid .label,
+.scoreboard-grid .team-name {
+  border: 1px solid #000;
+}
+.scoreboard-grid .label {
+  font-size: 0.8rem;
+  padding: 3px 2px 1px;
+  background: #000;
+  color: white;
+}
 .scoreboard-grid .visitor-runs,
 .scoreboard-grid .home-runs,
 .scoreboard-grid .visitor-hits,
@@ -67,6 +76,7 @@
 .scoreboard-grid .visitor-errors,
 .scoreboard-grid .home-errors {
   transition: background 200ms ease;
+  border: 1px solid #000;
 }
 @media (min-width: 1140px) {
   .scoreboard-grid .visitor-runs:hover,
@@ -86,12 +96,7 @@
 
 .details {
   padding: 0 1.5rem;
-}
-@media (min-width: 1140px) {
-  .details {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
+  display: grid;
 }
 .details p {
   margin: 0.5rem 0;
@@ -107,7 +112,7 @@
 .details .outs,
 .details .inning {
   font-size: 1.75rem;
-  margin-left: 1rem;
+  margin-left: 2rem;
 }
 @media (min-width: 768px) {
   .details .outs,
@@ -129,18 +134,13 @@
   }
 }
 
-main {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-}
-
 .batter-group {
   display: grid;
   grid-template-columns: 1fr auto auto auto;
   gap: 0.5rem;
   padding: 10px;
   border: 1px solid #000;
+  border-radius: 3px 3px 0 0;
   transition: background 200ms ease;
 }
 @media (min-width: 768px) {
@@ -162,6 +162,7 @@ main {
 }
 .batter-group p {
   margin: 0;
+  font-size: 14px;
 }
 
 .pitcher-group {
@@ -170,6 +171,7 @@ main {
   gap: 0.5rem;
   padding: 10px;
   border: 1px solid #000;
+  border-radius: 3px 3px 0 0;
   transition: background 200ms ease;
 }
 @media (min-width: 768px) {
@@ -191,6 +193,7 @@ main {
 }
 .pitcher-group p {
   margin: 0;
+  font-size: 14px;
 }
 
 .batting-runs {
@@ -213,17 +216,29 @@ main {
   color: purple;
 }
 
+@media (min-width: 1140px) {
+  .outcomes-field-dice {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .game-outcomes {
   display: grid;
   grid-template-columns: 3fr 2fr;
   gap: 1rem;
-  font-size: 0.8rem;
-  margin-top: 1rem;
+  font-size: 14px;
 }
 @media (min-width: 768px) {
   .game-outcomes {
     font-size: 1rem;
     gap: 2rem;
+  }
+}
+@media (min-width: 1140px) {
+  .game-outcomes {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 }
 .game-outcomes ul {
@@ -235,6 +250,7 @@ main {
   -moz-column-width: 5px;
        column-width: 5px;
   border: 1px solid #000;
+  border-radius: 0 0 3px 3px;
   border-top: 0;
 }
 @media (min-width: 768px) {
@@ -263,31 +279,19 @@ main {
   font-weight: 700;
 }
 
-main {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  align-content: center;
-}
-@media (min-width: 1140px) {
-  main {
-    align-content: start;
-    margin-top: 6rem;
-  }
-}
-
 .diamond {
-  position: relative;
   margin-right: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
 }
 
 .field {
-  position: absolute;
-  width: 140px;
-  height: 140px;
+  position: relative;
+  width: 75px;
+  height: 75px;
   border: 3px solid #000;
-  left: 50%;
-  top: 25%;
-  transform: rotate(45deg) translate(-50%, 25%);
+  transform: rotate(45deg);
 }
 @media (min-width: 768px) {
   .field {
@@ -296,8 +300,8 @@ main {
   }
 }
 .field .base {
-  width: 36px;
-  height: 36px;
+  width: 16px;
+  height: 16px;
   border: 3px solid #000;
   position: absolute;
 }
@@ -326,15 +330,15 @@ main {
 .dice {
   display: grid;
   place-items: center;
-}
-@media (min-width: 1140px) {
-  .dice {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+  max-width: 100%;
+  margin: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+  padding: 0 0 2rem;
 }
 .dice .die {
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
   border: 2px solid #000;
   border-radius: 5px;
   display: grid;
@@ -361,21 +365,36 @@ main {
   transform: rotate(45deg);
   align-self: start;
 }
+@media (min-width: 1140px) {
+  .dice .die.die3 {
+    align-self: center;
+  }
+}
 .dice .die.die3 span {
   display: inline-block;
   transform: rotate(-45deg);
 }
 
+.dice-roller {
+  margin: auto;
+  width: 75%;
+}
 @media (min-width: 768px) {
   .dice-roller {
     text-align: center;
   }
 }
+@media (min-width: 1140px) {
+  .dice-roller {
+    text-align: right;
+    margin-top: 2rem;
+  }
+}
 .dice-roller button {
   display: inline-block;
   width: 100%;
-  padding: 1.5rem 0;
-  font-size: 1.5rem;
+  padding: 1rem 0;
+  font-size: 1.15rem;
   text-transform: uppercase;
   background: #000;
   color: #fff;

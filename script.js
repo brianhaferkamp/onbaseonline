@@ -267,13 +267,14 @@ $("#roll").on("click", function () {
 //---------------------------------------------
 
 function switchTeams() {
-  var teamAtBat = $(".team-at-bat").text();
+  var teamAtBat = $(".team-at-bat");
+  console.log(teamAtBat);
   var vRuns = $(".visitor-runs").text();
   var hRuns = $(".home-runs").text();
-  if (teamAtBat == "Visiting Team") {
+  if ($(teamAtBat).hasClass("visitor-team-name")) {
     $(".home-team-name").addClass("team-at-bat");
     $(".visitor-team-name").removeClass("team-at-bat");
-  } else if (teamAtBat == "Home Team") {
+  } else if ($(teamAtBat).hasClass("home-team-name")) {
     $(".visitor-team-name").addClass("team-at-bat");
     $(".home-team-name").removeClass("team-at-bat");
     // change inning
