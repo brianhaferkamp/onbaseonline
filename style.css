@@ -147,6 +147,7 @@ html, body {
 main {
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: auto;
 }
 @media (min-width: 1140px) {
   main {
