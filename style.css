@@ -151,7 +151,7 @@ main {
 }
 @media (min-width: 1140px) {
   main {
-    grid-template-rows: auto 2fr 1fr auto;
+    grid-template-rows: auto 1fr auto auto;
   }
 }
 
@@ -245,13 +245,6 @@ main {
 
 .stamina {
   color: purple;
-}
-
-@media (min-width: 1140px) {
-  .outcomes-field-dice {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
 }
 
 .game-outcomes {
@@ -364,6 +357,11 @@ main {
 @media (min-width: 768px) {
   .dice {
     gap: 2.5rem;
+  }
+}
+@media (min-width: 1140px) {
+  .dice {
+    padding: 1rem 0;
   }
 }
 .dice .die {
